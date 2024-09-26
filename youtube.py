@@ -1,4 +1,5 @@
-from pytube import YouTube
+# from pytube import YouTube
+from pytubefix import YouTube
 import os
 
 def onProgress(stream, chunk, remains):
@@ -52,6 +53,6 @@ class DownloadYoutube():
 if __name__ == "__main__":
     # run python ./youtube.py
     # https://www.youtube.com/watch?v=asU8O_R5V6w&ab_channel=JunSeong
-    link = 'https://www.youtube.com/watch?v=gtnFeoAbsq8&t=17s&ab_channel=DcardVideo'
+    link = 'https://www.youtube.com/watch?v=2Mo0Zq8ORoE&ab_channel=%E5%92%AA%E8%95%BE%EB%AF%B8%EB%9E%98'
     dy = DownloadYoutube(link=link)
     dy.download()

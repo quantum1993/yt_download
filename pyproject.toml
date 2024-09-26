@@ -9,6 +9,7 @@ packages = [{include = "03_youtube_download"}]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
 pytube = "^15.0.0"
+pytubefix = "^7.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

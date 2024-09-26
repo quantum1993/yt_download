@@ -115,6 +115,18 @@ files = [
 ]
 
 [[package]]
+name = "pytubefix"
+version = "7.0.0"
+description = "Python3 library for downloading YouTube Videos."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pytubefix-7.0.0-py3-none-any.whl", hash = "sha256:3f794832b4f7f9ca46a35f4b37fc9c6ac989c2adaabb9f0a74dbe6a0c8ba4431"},
+    {file = "pytubefix-7.0.0.tar.gz", hash = "sha256:9d5abe7d835f1b54dd20d06653b28914ae888a046fd6aaf7e19f178df127acec"},
+]
+
+[[package]]
 name = "pywin32-ctypes"
 version = "0.2.3"
 description = "A (partial) reimplementation of pywin32 using ctypes/cffi"
@@ -150,4 +162,4 @@ type = ["importlib-metadata (>=7.0.2)", "jaraco.develop (>=7.21)", "mypy (>=1.11
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.14"
-content-hash = "6a3be1ae313b2531149215995b51fef0da8738f8cf8a9f38544c9d12e273e19a"
+content-hash = "477faa71a160f0c39c64a22a26ce08216ddc55a0aea674089e04f6ed8a9bc692"
