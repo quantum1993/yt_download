@@ -1,5 +1,6 @@
 # from pytube import YouTube
 from pytubefix import YouTube
+from pytubefix.cli import on_progress
 import os
 
 def onProgress(stream, chunk, remains):
@@ -18,7 +19,7 @@ class DownloadYoutube():
         if not os.path.isdir(self.default_folder):
             os.mkdir(self.default_folder)
 
-        self.yt = YouTube(self.link, on_progress_callback=onProgress)
+        self.yt = YouTube(self.link, on_progress_callback=on_progress)
 
         print(f"title: {self.yt.title}")
         print(f"length of the video: {self.yt.length}") 
