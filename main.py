@@ -1,10 +1,20 @@
-from pytubefix import YouTube
-from pytubefix.cli import on_progress
+import streamlit as st
+from youtube import DownloadYoutube
  
-url = "https://www.youtube.com/watch?v=gtnFeoAbsq8&t=17s&ab_channel=DcardVideo"
+st.write("Youtube Downloader")
+link = st.text_input("Enter the link:")
+resolution = st.text_input("Resolution:", value='highest')
+format = st.text_input("Format:", value='mp4')
+folder_path = st.text_input("Folder path:", value='downloaded_files')
+file_name = st.text_input("File name (leave it empty if you'd like to use default file name):")
 
-yt = YouTube(url, on_progress_callback = on_progress)
-print(yt.title)
- 
-ys = yt.streams.get_highest_resolution()
-ys.download()
+def trigger_download():
+    dy = DownloadYoutube(link=link, format=format.lower(), file_name=file_name, resolution=resolution.lower(), default_folder=folder_path)
+    st.text_area('Result : ', 
+                 f"""title: {dy.yt.title} \n length of the video: {st.yt.length} \n""")
+    # dy.download()
+    print(link, resolution, format, folder_path, file_name)
+
+st.button(label='Download', on_click=trigger_download)
+
+# run command "streamlit run main.py"

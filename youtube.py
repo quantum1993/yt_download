@@ -16,6 +16,9 @@ class DownloadYoutube():
         self.file_name = file_name
         self.resolution = resolution
         self.default_folder = default_folder
+        self.is_error = False
+        self.error_msg = ""
+
         if not os.path.isdir(self.default_folder):
             os.mkdir(self.default_folder)
 
@@ -27,6 +30,18 @@ class DownloadYoutube():
         # print(self.yt.channel_url)     # 影片作者頻道網址
         # print(self.yt.thumbnail_url)   # 影片縮圖網址
         # print(self.yt.views)           # 影片觀看數
+
+    def check_default_value(self):
+        if self.link is None or self.link == "":
+            self.is_error = True
+            self.error_msg = 'link is empty'
+
+        allowede_format_list = ["highest", "1080p", "720p", "360p", "240p", "120p"]
+        if self.format not in allowede_format_list:
+            self.is_error = True
+            self.error_msg = f'format should be one of options: {",".join(allowede_format_list)}. Find {self.format}' 
+
+        if self.file_name
 
     def download(self):
         print('Start downloading!')
