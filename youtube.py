@@ -66,7 +66,7 @@ class DownloadYoutube():
 
             self.display_msg += f"Title: {self.yt.title} \nlength of the video: {self.yt.length} s \nAuthor: {self.yt.author} \n"
             print(f"title: {self.yt.title}")
-            print(f"length of the video: {self.yt.length}") 
+            print(f"length of the video: {self.yt.length} s") 
             print(f"author: {self.yt.author}") 
             # print(self.yt.channel_url)     # 影片作者頻道網址
             # print(self.yt.thumbnail_url)   # 影片縮圖網址
