@@ -53,4 +53,5 @@ with col1:
 with col2:
     st.button(label='Download', on_click=trigger_download)
 
-# run command "streamlit run main.py"
+  # run command "streamlit run main.py" to launch the app in your local server
+  # plz refer to the deployment.md if you'd like to deploy as a executable
